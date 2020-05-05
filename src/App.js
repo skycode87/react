@@ -1,24 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Home from './pages/Home';
-import MiComponente from './pages/udemy/ejemplo1';
-import Footer from './pages/udemy/ejemplo2';
+import Container1 from './containers/container1';
+import { Container } from '@material-ui/core';
 
-const App = ({ store }) => (
-	<Provider store={store}>
-		<Router>
-			<div>
-				<Route exact path="/" component={MiComponente} />
-			</div>
-		</Router>
-	</Provider>
-);
+class App extends Component{
 
-App.propTypes = {
-	store: PropTypes.object.isRequired
-};
+render(){
+	return (
+		<div>
+			<p>React</p>
+			<Container1 ></Container1>
+		</div>
+	)
+}
+}
+
 
 export default App;
